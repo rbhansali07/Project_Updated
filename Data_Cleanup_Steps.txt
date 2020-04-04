@@ -9,4 +9,6 @@ fed_wage_def ={1968:1.60,1969:1.60,1970:1.60,1971:1.60,1972:1.60,1973:1.60,1974:
     		if (wage == "0.00"):
        		wage_df_clean.loc[i,'Minimum Wage'] = fed_wage_def[wage_df_clean.loc[i,"Year"]]
        		wage_df_clean.loc[i,'Wage equivalent in 2018'] = fed_wage_eqvt_2018[wage_df_clean.loc[i,"Year"]]
-6. Saved output file as .csv with new name.
+6. Made an API call to api.census.gov to get poverty rate for all states between 1998 to 2017 ( no data available prior to 2017).
+7. Merged the cleaned wage data and api data and removed rows for few states (Guam, Federal (FLSA), Puerto Rico and US virgin islands)
+8. Saved output file as .csv with new name.
